@@ -39,7 +39,7 @@ func (f *{{ .Name }}Flag) Set(s string) error {
 	return nil
 }
 
-func (f *{{ .Name }}Flag) Required() Flag { 
+func (f *{{ .Name }}Flag) Required() Flag {
 	f.req = true
 	return f
 }

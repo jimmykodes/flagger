@@ -44,7 +44,7 @@ func (f *{{ .Name }}SliceFlag) Set(s string) error {
 	return nil
 }
 
-func (f *{{ .Name }}SliceFlag) Required() Flag { 
+func (f *{{ .Name }}SliceFlag) Required() Flag {
 	f.req = true
 	return f
 }
