@@ -49,6 +49,11 @@ func (f *{{ .Name }}SliceFlag) Required() Flag {
 	return f
 }
 
+func (f *{{ .Name }}SliceFlag) AddSources(sources ...Valuer) Flag {
+	f.addSources(sources...)
+	return f
+}
+
 func {{ pascal .Name }}SliceFlag(name string, value []{{ .Type }}, usage string) Flag {
 	return &{{ .Name }}SliceFlag{
 		baseFlag: &baseFlag{name: name, usage: usage},

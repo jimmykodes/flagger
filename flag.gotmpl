@@ -44,6 +44,11 @@ func (f *{{ .Name }}Flag) Required() Flag {
 	return f
 }
 
+func (f *{{ .Name }}Flag) AddSources(sources ...Valuer) Flag {
+	f.addSources(sources...)
+	return f
+}
+
 func {{ pascal .Name }}Flag(name string, value {{ .Type }}, usage string) Flag {
 	return &{{ .Name }}Flag{
 		baseFlag: &baseFlag{name: name, usage: usage},
